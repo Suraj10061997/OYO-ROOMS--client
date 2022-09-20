@@ -1,6 +1,6 @@
 
 import './App.css';
-import { useEffect,useState } from 'react';
+import { useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import {ToastContainer} from "react-toastify";
@@ -29,6 +29,7 @@ function App() {
 
   useEffect(()=>{
     dispatch(setUser(JSON.parse(localStorage.getItem("profile"))));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
 

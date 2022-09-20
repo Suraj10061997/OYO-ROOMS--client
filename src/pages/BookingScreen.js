@@ -27,6 +27,7 @@ const BookingScreen = () => {
             toast.error(error);
         }
         dispatch(getSingleRoom(roomId));
+       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [error])
 
     if (loading) {
@@ -57,7 +58,7 @@ const BookingScreen = () => {
             <div className="row justify-content-center mt-5 bs">
                 <div className="col-md-5">
                     <h1>{room.name}</h1>
-                    {room.imageurls && <img src={room.imageurls[0]} className="bigimg" />}
+                    {room.imageurls && <img src={room.imageurls[0]} alt="" className="bigimg" />}
                 </div>
                 <div className="col-md-5">
                     <h1 style={{ textAlign: "right" }}>Booking Details</h1>

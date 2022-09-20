@@ -14,6 +14,7 @@ const AdminShowRooms = () => {
       toast.error(error);
     }
     dispatch(getAllRooms());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (!JSON.parse(localStorage.getItem("profile"))) { window.location.href = "/login" };

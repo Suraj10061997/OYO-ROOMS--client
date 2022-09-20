@@ -21,6 +21,7 @@ const Home = () => {
 
     useEffect(() => {
         dispatch(getAllRooms());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     /*

@@ -17,6 +17,8 @@ const MyBookings = () => {
     }
     console.log(userDetails);
     dispatch(userBookings({ userDetails, toast }));
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 

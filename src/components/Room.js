@@ -17,7 +17,7 @@ const Room = ({ room , fromDate,toDate}) => {
     <div className="col-md-9 mt-2">
       <div className='row bs' data-aos="fade-up">
         <div className="col-md-4">
-          <img src={room.imageurls[0]} className="smallimg" />
+          <img src={room.imageurls[0]} alt="" className="smallimg" />
         </div>
         <div className="col-md-7">
           <h1>{room.name}</h1>
@@ -48,6 +48,7 @@ const Room = ({ room , fromDate,toDate}) => {
                     <img
                       className="d-block w-100 bigimg"
                       src={url}
+                      alt=""
                     />
                   </Carousel.Item>
                 )

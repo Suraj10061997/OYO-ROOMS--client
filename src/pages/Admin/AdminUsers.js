@@ -14,6 +14,7 @@ const AdminUsers = () => {
       toast.error(error);
     }
     dispatch(getAllUsers());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (!JSON.parse(localStorage.getItem("profile"))) { window.location.href = "/login" };

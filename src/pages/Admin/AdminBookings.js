@@ -14,6 +14,7 @@ const AdminBookings = () => {
       toast.error(error);
     }
     dispatch(getAllBookings());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   if (!JSON.parse(localStorage.getItem("profile"))) { window.location.href = "/login" };
