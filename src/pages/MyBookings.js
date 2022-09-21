@@ -15,9 +15,7 @@ const MyBookings = () => {
     const userDetails = {
       userId: user.result._id
     }
-    console.log(userDetails);
     dispatch(userBookings({ userDetails, toast }));
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -46,9 +44,9 @@ const MyBookings = () => {
       {!singleUserBookings.length ? (
         <h1 style={{ textAlign: "center", marginTop: "4rem" }}>No Bookings Found</h1>
       ) : (
-        singleUserBookings.length && singleUserBookings.map((booking) => {
+        singleUserBookings.length && singleUserBookings.map((booking,index) => {
           return (
-            <div className="row bs" >
+            <div className="row bs" key={index}>
               <div className="col-md-12">
                 <h4>{booking.room}</h4>
                 <p><b>Booking Id</b> : {booking._id}</p>
